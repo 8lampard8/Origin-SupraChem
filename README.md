@@ -8,7 +8,7 @@ Origin fluorescence workflows for supramolecular chemistry, packaged as the `ori
 - Origin 原生 Savitzky–Golay：默认 25 点、二阶、无边界填充。
 - 波长严格大于阈值（默认 420 nm）的最高局部峰，支持平台峰和缺失峰报告。
 - 组间峰值的样本方差、总体方差及标准差。
-- 主体/L/D 三曲线，Zn²⁺ 上标，原始数据保留和图像核验。
+- 主体/L/D 三曲线，金属上标，原始数据保留和图像核验。
 
 这是技能与可复用辅助脚本，不是自动适配任何标签的全自动程序。Codex 会先检查来源、样品语义和单位，再按请求编写本次任务脚本。
 
