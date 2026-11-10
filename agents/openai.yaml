@@ -1,0 +1,4 @@
+interface:
+  display_name: "Origin 荧光数据处理"
+  short_description: "处理 Origin 荧光光谱：分类汇总、平滑、寻峰、方差及手性对比绘图"
+  default_prompt: "使用 $origin-fluorescence 处理我提供的 Origin 项目，按样品标签汇总并完成指定的数据分析和绘图。"

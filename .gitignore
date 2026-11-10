@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+work/
+outputs/
+*.opj
+*.OPJ
+*.opju
+*.OPJU
+*.png
+*.jpg
+*.pdf
+*.zip
+.env
+.env.*
+.maintenance.json
