@@ -1,4 +1,4 @@
 interface:
-  display_name: "Origin ӫ�����ݴ���"
-  short_description: "���� Origin ӫ����ף�������ܡ�ƽ����Ѱ�塢������ԶԱȻ�ͼ"
-  default_prompt: "ʹ�� $origin-fluorescence �������ṩ�� Origin ��Ŀ������Ʒ��ǩ���ܲ����ָ�������ݷ����ͻ�ͼ��"
+  display_name: "Origin 荧光光谱分析"
+  short_description: "面向多类待测物的荧光滴定、光谱预处理、特征提取与响应比较"
+  default_prompt: "使用 $origin-fluorescence 分析我提供的 Origin 项目，依据待测物与实验设计开展荧光滴定、光谱预处理或响应比较，并生成可编辑科研图表。"
