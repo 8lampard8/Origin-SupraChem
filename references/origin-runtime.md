@@ -16,6 +16,8 @@ python "<skill>/scripts/run_origin.py" --project "E:/sample.OPJ" --script "<skil
 
 `run_origin.py` 每次启动独立实例，保持窗口可见，不自动退出 Origin、不覆盖输入项目。`--work` 只存临时 wrapper/status 文件，不能用技能安装目录。每次使用不同 work 子目录。检查工作脚本自己的结果文件；包装器捕获并回传 Python 异常。工作脚本尽量在所有数据验证后创建最终结果和保存。
 
+输入是筛选表等外部数据时，省略 `--project`，在独立实例的新项目中建立工作表和图页。脚本参数中的输入和输出路径使用绝对路径。
+
 检查后制作处理脚本，再用同一输入项目执行；先前检查实例可留给用户，不关闭未知用户窗口。需要避免重复实例时，可自己保持一个外部 COM 引用，先 inspect，再处理；不要在 Origin 内置 Python 中无限轮询导致界面阻塞。
 
 `originpro` 不在外部环境安装也能使用；脚本在 Origin 内运行。保留项目内部 Python 与外部 Python 的职责。优先使用 COM/原生 API；确需 GUI 操作才读取并使用可用的 computer-use 技能。

@@ -12,6 +12,7 @@ Fluorescence spectroscopy workflows for supramolecular chemistry and molecular s
 - **光谱特征提取**：在指定波长区间提取局部峰及其峰位，支持平台峰与缺失峰报告；420 nm 仅作为参数示例。
 - **响应离散性与重复性统计**：计算组间峰值的样本方差、总体方差及标准差；重复性评价要求相同实验条件下的重复测量。
 - **待测物响应与对照比较**：按实验设计比较空白传感体系、不同待测物及相关对照；对手性体系可进一步比较 L/D、R/S 等对映体响应。
+- **配对强度筛选**：从空白与构型强度表生成联动计算列和分条件的线性双向条形图。合成输入与脚本用法见[配对强度筛选](references/paired-screening.md)。
 - **科研图表输出**：规范坐标、单位、物种命名及离子电荷上标，交付可编辑 Origin 项目和图像。
 
 本项目提供技能指令与可复用辅助脚本。具体任务先核实样品语义、实验变量和单位，再选择适用的处理流程。结合常数、结合计量比、检出限或选择性结论需要相应实验设计、模型与验证，不能由常规平滑或对比图自动推定。
@@ -22,7 +23,7 @@ Fluorescence spectroscopy workflows for supramolecular chemistry and molecular s
 - 外部 Python 3.10+ 和 `pywin32`（`python -m pip install pywin32`）。
 - 离线算法测试只需要 Python 标准库，不需要 Origin、SciPy 或实验数据。
 
-测试过 OriginPro 2024b 的原生平滑流程；其他版本需实际验证。本项目不附带 Origin 软件、许可、实验数据或第三方代码。
+在 OriginPro 2024b 实测了原生平滑和配对强度筛选流程。其他版本按需验证。本项目不附带 Origin 软件、许可、实验数据或第三方代码。
 
 ## 安装为技能
 

@@ -7,14 +7,15 @@ import uuid
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--project', required=True)
+    parser.add_argument('--project', help='Existing project to load. Omit for a new project.')
     parser.add_argument('--script', required=True)
     parser.add_argument('--work', required=True)
     parser.add_argument('args', nargs=argparse.REMAINDER)
     a = parser.parse_args()
-    project, script = Path(a.project).resolve(), Path(a.script).resolve()
-    if not project.is_file() or not script.is_file():
-        parser.error('Project and script must exist')
+    project = Path(a.project).resolve() if a.project else None
+    script = Path(a.script).resolve()
+    if not script.is_file() or (project is not None and not project.is_file()):
+        parser.error('The script and any specified project must exist')
     work = Path(a.work).resolve(); work.mkdir(parents=True, exist_ok=True)
     tag = uuid.uuid4().hex[:12]
     status = work / ('status_' + tag + '.json')
@@ -36,7 +37,7 @@ except BaseException:
     import win32com.client
     origin = win32com.client.DispatchEx('Origin.Application')
     origin.Visible = 100
-    if not origin.Load(str(project)):
+    if project is not None and not origin.Load(str(project)):
         raise RuntimeError('Origin failed to load project: ' + str(project))
     command = 'run -pyf "' + wrapper.as_posix() + '";'
     if not origin.Execute(command):
